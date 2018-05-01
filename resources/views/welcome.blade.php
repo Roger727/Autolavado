@@ -1,124 +1,26 @@
-{{-- <!doctype html>
-<html lang="{{ app()->getLocale() }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>Laravel</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-            </div>
-        </div>
-    </body>
-</html>
- --}}
-
-
-
- @extends('layouts.Principal')
-@extends('layouts.menu')
+@extends('layouts.Principal')
+{{-- @extends('layouts.menu') --}}
 @section('content')
-      <div class="container">
-        <center><h2>Registro De Autos:</h2></center>
-    </br>
-          <form action="" method="post">
-            {{ csrf_field() }}
-          <div class="form-group" >
-            <label>Periodo Activo:</label>
-            <input readonly class="form-control" name="Id_Periodo" value="">
-          </div>
-            
-          <div class="form-group" >
-            <label>Nombre de la materia:</label>
-            <input class="form-control" name="Nombre_Materia">
-          </div>
-          <div class="form-group">
-            <label for="">Carrera a la que pertenece:</label>
-          </div>
-        <br>
-          <div align="right"><button type="submit" class="btn btn-outline-primary">Registrar</button>
-        </form>
-      </div>
+  <div class="container">
+    <form class="formulario" method="">
+      <h1 align="center">Nuevo Registro</h1>
+      <br>
+      <label>Matricula del auto:</label>
+      <input class="form-control" placeholder="######" name="Matricula">
+      <br>
+      <label>Propietario:</label>
+      <input class="form-control" placeholder="Nombre, Apellidos" name="Propietario">
+      <br>
+      <label>Tipo de servicio:</label>
+      <select class="form-control" name="Servicio">
+        <option>-- Seleccione --</option>
+        <option value="Servicio Completo"> Servicio completo </option>
+        <option value="Servicio medio"> Servicio medio </option>
+        <option value="Servicio basico"> Servicio basico </option>
+      </select>
+      <br>
+      <button type="submit" class="btn btn-outline-primary">Enviar Registro</button>
+    </form>
+  </div>
+</section>
 @endsection
