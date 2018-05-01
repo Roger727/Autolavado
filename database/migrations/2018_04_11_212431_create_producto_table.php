@@ -13,10 +13,11 @@ class CreateProductoTable extends Migration
      */
     public function up()
     {
-        Schema::create('producto', function (Blueprint $table) {
+        Schema::create('Producto', function (Blueprint $table) {
             $table->string('Id_Producto',12)->primary('Id_Producto');
             $table->string('Nombre_Producto',50);
             $table->smallinteger('Precio');
+            $table->smallinteger('Existencia');
         });
     }
 
@@ -27,6 +28,6 @@ class CreateProductoTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('producto');
+        Schema::dropIfExists('Producto');
     }
 }

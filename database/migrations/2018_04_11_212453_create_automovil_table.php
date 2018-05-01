@@ -13,7 +13,7 @@ class CreateAutomovilTable extends Migration
      */
     public function up()
     {
-        Schema::create('automovil', function (Blueprint $table) {
+        Schema::create('Automovil', function (Blueprint $table) {
             $table->string('Id_Automovil',12)->primary('Id_Automovil');
             $table->string('Matricula',9);
             $table->string('Color',15);
@@ -28,6 +28,6 @@ class CreateAutomovilTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('automovil');
+        Schema::dropIfExists('Automovil');
     }
 }

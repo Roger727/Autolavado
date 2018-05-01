@@ -13,7 +13,7 @@ class CreateServicioTable extends Migration
      */
     public function up()
     {
-        Schema::create('servicio', function (Blueprint $table) {
+        Schema::create('Servicio', function (Blueprint $table) {
             $table->string('Id_Servicio',12)->primary('Id_Servicio');
             $table->string('Nombre_Servicio',50);
             $table->smallinteger('Precio');
@@ -27,6 +27,6 @@ class CreateServicioTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('servicio');
+        Schema::dropIfExists('Servicio');
     }
 }

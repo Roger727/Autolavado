@@ -13,11 +13,14 @@ class CreateLavadorAutomovilTable extends Migration
      */
     public function up()
     {
-        Schema::create('lavador_automovil', function (Blueprint $table) {
+        Schema::create('Lavador_Automovil', function (Blueprint $table) {
             $table->string('Id_Automovil',12);
             $table->foreign('Id_Automovil')->references('Id_Automovil')->on('Automovil');
+            $table->string('Id_Servicio',12);
+            $table->foreign('Id_Servicio')->references('Id_Servicio')->on('Servicio');
             $table->string('Id_Lavador',12);
             $table->foreign('Id_Lavador')->references('Id_Lavador')->on('Lavador');
+            $table->date('Fecha');
         });
     }
 
@@ -28,6 +31,6 @@ class CreateLavadorAutomovilTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('lavador_automovil');
+        Schema::dropIfExists('Lavador_Automovil');
     }
 }

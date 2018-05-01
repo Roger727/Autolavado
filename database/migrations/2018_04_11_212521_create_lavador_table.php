@@ -13,7 +13,7 @@ class CreateLavadorTable extends Migration
      */
     public function up()
     {
-        Schema::create('lavador', function (Blueprint $table) {
+        Schema::create('Lavador', function (Blueprint $table) {
             $table->string('Id_Lavador',12)->primary('Id_Lavador');
             $table->string('Nombre_Lavador',50);
             $table->string('Apellido_Paterno_Lavador',50);
@@ -29,6 +29,6 @@ class CreateLavadorTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('lavador');
+        Schema::dropIfExists('Lavador');
     }
 }

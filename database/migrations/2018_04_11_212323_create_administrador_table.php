@@ -13,7 +13,7 @@ class CreateAdministradorTable extends Migration
      */
     public function up()
     {
-        Schema::create('administrador', function (Blueprint $table) {
+        Schema::create('Administrador', function (Blueprint $table) {
             $table->string('Id_Administrador',12)->primary('Id_Administrador');
             $table->string('Nombre_Administrador',50);
             $table->string('Apellido_Paterno_Administrador',50);
@@ -29,6 +29,6 @@ class CreateAdministradorTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('administrador');
+        Schema::dropIfExists('Administrador');
     }
 }
