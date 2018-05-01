@@ -37,7 +37,7 @@
 
     <nav class="menuNavegacion">
       @yield('menu')
-    </nav>
+{{--     </nav>
     <script src="{{ asset('js/jquery.min.js') }}"></script>
     <script src="{{ asset('js/script.js') }}"></script>
     <script src="{{ asset('js/jquery.js') }}"></script>
@@ -49,6 +49,6 @@
     <script src="{{ asset('js/tatuaje-datos.js') }}"></script>
     <script src="{{ asset('js/donacion.js') }}"></script>
     <script src="{{ asset('js/destetes-adoptados.js') }}"></script>
-    <script src="{{ asset('js/destetes-notas.js') }}"></script>
+    <script src="{{ asset('js/destetes-notas.js') }}"></script> --}}
   </body>
 </html>
