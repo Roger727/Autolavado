@@ -4,6 +4,7 @@
     <a href="#" class="btn-menu">Menu<i class="icono fa fa-bars" aria-hidden="true"></i></a>
 
     <ul class="menu">
+
         <li><a href=""><i class="icono izquierda fa fa-home" aria-hidden="true"></i>Opcion 1</a>
         </li>
 
