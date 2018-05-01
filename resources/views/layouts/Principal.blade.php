@@ -37,18 +37,7 @@
 
     <nav class="menuNavegacion">
       @yield('menu')
-{{--     </nav>
-    <script src="{{ asset('js/jquery.min.js') }}"></script>
-    <script src="{{ asset('js/script.js') }}"></script>
-    <script src="{{ asset('js/jquery.js') }}"></script>
-    <script src="{{ asset('js/app.js') }}"></script>
-    <script src="{{ asset('js/sementales.js') }}"></script>
-    <script src="{{ asset('js/grupos.js') }}"></script>
-    <script src="{{ asset('js/destetes-datos.js') }}"></script>
-    <script src="{{ asset('js/partos.js') }}"></script>
-    <script src="{{ asset('js/tatuaje-datos.js') }}"></script>
-    <script src="{{ asset('js/donacion.js') }}"></script>
-    <script src="{{ asset('js/destetes-adoptados.js') }}"></script>
-    <script src="{{ asset('js/destetes-notas.js') }}"></script> --}}
+</nav>
+    
   </body>
 </html>
