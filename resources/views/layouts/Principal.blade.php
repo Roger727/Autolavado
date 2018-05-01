@@ -20,7 +20,7 @@
 
       <div class="botonMenu"></div>
       <figure>
-        <img src="{{asset('images/logo_fesc.jpg')}}" alt="">
+        <img src="{{asset('images/elefante.jpg')}}" alt="">
       </figure>
       <figure>
         <img src="{{asset('images/logo_fesc.jpg')}}" alt="">
