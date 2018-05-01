@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body{
+  background: #fff;
+  font-family: 'Roboto', sans-serif;
+  line-height: 18px;
+}
+
+a{
+  text-decoration: none;
+  color: #000;
+}
+.btn-menu{
+  background: #2E9AFE;
+  color: #fff;
+  display: none;
+  padding: 30px;
+
+}
+.btn-menu .icono{
+  float: right;
+}
+.contenedor-menu{
+  min-width: 100%;
+  /*
+  width: 20%;
+  margin: 50px;*/
+  display: inline-block;
+  font-family: 'Roboto', sans-serif;
+  line-height: 18px;
+}
+.contenedor-menu .menu{
+  width: 100%;
+}
+.contenedor-menu ul{
+  list-style: none;
+}
+.contenedor-menu .menu li a{
+  color: #494949;
+  display: block;
+  padding: 15px 20px;
+  background: #e9e9e9;
+}
+.contenedor-menu .menu li a:hover{
+  background: #2fadb7; /*COLOR CUNICONTROL*/
+  color: #fff;
+}
+.contenedor-menu .menu .icono{
+  font-size: 12px;
+  line-height: 18px;
+}
+.contenedor-menu .menu .icono.izquierda{
+  float: left;
+  margin-right: 10px;
+}
+.contenedor-menu .menu .icono.derecha{
+  float: right;
+  margin-left: : 10px;
+}
+/*submenu*/
+.contenedor-menu .menu ul{
+  display: none;
+
+}
+.contenedor-menu .menu ul li a{
+  background: #424242;
+  color: #e9e9e9;
+}
+.contenedor-menu .menu .activado > a{
+  background: #1a95d5;
+  color: #fff;
+}
+.container{
+  width: 100%;
+  padding: 50px;
+  background-color:white;
+  border: 2px solid black;
+  border-radius: 10px;
+
+}
+.container form{
+
+}
+.form-group{
+  /*color: white;*/
+}
+@media screen and (max-width: 450px){
+  body{
+    padding-top: 80px;
+  }
+  .container{
+    width: 100%;
+   padding-left: 5%;
+   padding-right: 5%;
+  }
+  .contenedor-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  .btn-menu {
+    display: block;
+    width: 100%;
+  }
+  .menu{
+    height: 100px;
+  }
+  .contenedor-menu .menu{
+    display:none;
+    height: 400px;
+    overflow:scroll;
+  }
+  .menuHorizontal{
+    display: none;
+  }
+  .contenedor-menu{
+    width: 100%;
+  }
+  .contenedorPrincipal
+  {
+   padding-top:50px;
+   padding-left: 3%;
+   padding-right: 3%;
+  }
+}
