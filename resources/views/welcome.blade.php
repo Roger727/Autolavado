@@ -1,3 +1,4 @@
+@extends('layouts.menu')
 @extends('layouts.Principal')
 @section('content')
   <div class="container">
