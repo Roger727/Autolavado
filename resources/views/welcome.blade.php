@@ -1,6 +1,7 @@
-@extends('layouts.menu')
+@extends('layouts.Menu')
 @extends('layouts.Principal')
 @section('content')
+<section>
   <div class="container">
     <form class="formulario" method="">
       <h1 align="center">Nuevo Registro</h1>
