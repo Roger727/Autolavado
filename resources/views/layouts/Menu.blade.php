@@ -14,8 +14,8 @@
 
         <li><a href="#"><i class="icono izquierda fa fa-clone" aria-hidden="true"></i>Opción principal 2<i class="icono derecha fa fa-chevron-down" aria-hidden="true"></i></a>
           <ul>
-              <li> <a href="{{url('/#/')}}">Opcion secundaria 1</a></li>
-              <li> <a href="{{url('/#/')}}">Opcion secundaria 2</a></li>
+              <li> <a href="{{url('/servicio/')}}">Servicios</a></li>
+              <li> <a href="{{url('/lavador/')}}">Lavadores</a></li>
               <li> <a href="{{url('/#/')}}">Opcion secundaria 3</a></li>
           </ul>
         </li>        
