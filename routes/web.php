@@ -25,3 +25,19 @@ Route::get('/lavador/{id_lavador}/edit', 'LavadorController@edit');
 Route::post('/lavador', 'LavadorController@store');
 Route::delete('/lavador/{id_lavador}', 'LavadorController@delete');
 Route::patch('/lavador/{id_lavador}', 'LavadorController@update');
+
+//Productos
+Route::get('/producto', 'ProductoController@index');
+Route::get('/producto/create', 'ProductoController@create');
+Route::get('/producto/{id_producto}/edit', 'ProductoController@edit');
+Route::post('/producto', 'ProductoController@store');
+Route::delete('/producto/{id_producto}', 'ProductoController@delete');
+Route::patch('/producto/{id_producto}', 'ProductoController@update');
+
+//Proveedores
+Route::get('/proveedor', 'ProveedorController@index');
+Route::get('/proveedor/create', 'ProveedorController@create');
+Route::get('/proveedor/{id_proveedor}/edit', 'ProveedorController@edit');
+Route::post('/proveedor', 'ProveedorController@store');
+Route::delete('/proveedor/{id_proveedor}', 'ProveedorController@delete');
+Route::patch('/proveedor/{id_proveedor}', 'ProveedorController@update');

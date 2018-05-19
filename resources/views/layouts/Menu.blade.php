@@ -16,7 +16,8 @@
           <ul>
               <li> <a href="{{url('/servicio/')}}">Servicios</a></li>
               <li> <a href="{{url('/lavador/')}}">Lavadores</a></li>
-              <li> <a href="{{url('/#/')}}">Opcion secundaria 3</a></li>
+              <li> <a href="{{url('/producto/')}}">Productos</a></li>
+              <li> <a href="{{url('/proveedor/')}}">Proveedores</a></li>
           </ul>
         </li>        
 {{--               <li>

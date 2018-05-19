@@ -42,7 +42,7 @@ class ServicioController extends Controller
 	    try{
 	      $servicio = Servicio::where('Id_Servicio', $id_servicio)->first();
 	      $servicio->Nombre_Servicio = $request->input('Nombre_Servicio');
-	      $servicio->Precio = $request->input('Precio');
+	      $servicio->Precio = $request->input('Precio_Producto');
 	      $servicio->save();
 	      return redirect('/servicio');
 	    } catch (\Illuminate\Database\QueryException $e){
