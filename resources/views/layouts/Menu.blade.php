@@ -6,9 +6,9 @@
 
         <li><a href="#"><i class="icono izquierda fa fa-clone" aria-hidden="true"></i>Opción principal 1<i class="icono derecha fa fa-chevron-down" aria-hidden="true"></i></a>
           <ul>
-              <li> <a href="{{url('/#/')}}">Opcion secundaria 1</a></li>
-              <li> <a href="{{url('/#/')}}">Opcion secundaria 2</a></li>
-              <li> <a href="{{url('/#/')}}">Opcion secundaria 3</a></li>
+              <li> <a href="{{url('/auto/')}}">Automovil</a></li>
+              <li> <a href="{{url('/#/')}}">2</a></li>
+              <li> <a href="{{url('/#/')}}">3</a></li>
           </ul>
         </li>
 

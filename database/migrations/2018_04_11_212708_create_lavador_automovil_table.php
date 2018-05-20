@@ -16,12 +16,12 @@ class CreateLavadorAutomovilTable extends Migration
         Schema::create('Lavador_Automovil', function (Blueprint $table) {
             $table->string('Id_Automovil',12);
             $table->foreign('Id_Automovil')->references('Id_Automovil')->on('Automovil');
-            $table->string('Id_Servicio',12);
-            $table->foreign('Id_Servicio')->references('Id_Servicio')->on('Servicio');
             $table->string('Id_Lavador',12);
             $table->foreign('Id_Lavador')->references('Id_Lavador')->on('Lavador');
-            $table->date('Fecha');
-
+            $table->string('Id_Servicio',12);
+            $table->foreign('Id_Servicio')->references('Id_Servicio')->on('Servicio');
+            $table->enum('Pago',['Pagado','No Pagado'])->nullable()->index();
+            
             $table->timestamps();
         });
     }

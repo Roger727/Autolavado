@@ -41,3 +41,11 @@ Route::get('/proveedor/{id_proveedor}/edit', 'ProveedorController@edit');
 Route::post('/proveedor', 'ProveedorController@store');
 Route::delete('/proveedor/{id_proveedor}', 'ProveedorController@delete');
 Route::patch('/proveedor/{id_proveedor}', 'ProveedorController@update');
+
+//Registro Diario
+Route::get('/auto', 'AutomovilController@index');
+Route::get('/auto/create', 'AutomovilController@create');
+Route::get('/auto/{id_proveedor}/edit', 'AutomovilController@edit');
+Route::post('/auto', 'AutomovilController@store');
+Route::delete('/auto/{id_proveedor}', 'AutomovilController@delete');
+Route::patch('/auto/{id_proveedor}', 'AutomovilController@update');

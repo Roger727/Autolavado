@@ -26,7 +26,7 @@
         <img src="{{asset('images/logo_fesc.jpg')}}" alt="">
       </figure>
       <figure>
-        <img src="{{asset('images/logo_fesc.jpg')}}" alt="">
+        <img src="{{asset('images/logo1.jpg')}}" alt="">
       </figure>
     </header>
 
