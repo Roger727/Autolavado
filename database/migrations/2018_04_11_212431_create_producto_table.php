@@ -18,6 +18,8 @@ class CreateProductoTable extends Migration
             $table->string('Nombre_Producto',50);
             $table->smallinteger('Precio');
             $table->smallinteger('Existencia');
+
+            $table->timestamps();
         });
     }
 

@@ -18,6 +18,8 @@ class CreateAutomovilTable extends Migration
             $table->string('Matricula',9);
             $table->string('Color',15);
             $table->string('Modelo',10);
+
+            $table->timestamps();
         });
     }
 

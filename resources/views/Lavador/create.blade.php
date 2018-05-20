@@ -4,7 +4,8 @@
       <div class="container">
         <center><h2>Registro de Lavadores</h2></center>
         </br>
-        <form action="{{url('/lavador')}}" method="post">
+        <form action="{{url('/lavador')}}" method="POST" role="form">
+          {{ csrf_field() }}
           <div class="form-group">
             <label for="Servicio">Nombre:</label>
             <input class="form-control" type="text" name="Nombre">

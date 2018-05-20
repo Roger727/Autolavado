@@ -21,6 +21,8 @@ class CreateLavadorAutomovilTable extends Migration
             $table->string('Id_Lavador',12);
             $table->foreign('Id_Lavador')->references('Id_Lavador')->on('Lavador');
             $table->date('Fecha');
+
+            $table->timestamps();
         });
     }
 

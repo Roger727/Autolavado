@@ -20,6 +20,7 @@ class CreateClienteTable extends Migration
             $table->string('Apellido_Materno',50);
             $table->string('Telefono_Cliente',12);
             $table->date('Fecha_Registro');
+            
             $table->timestamps();
         });
     }

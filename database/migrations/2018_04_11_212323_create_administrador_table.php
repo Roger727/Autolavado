@@ -19,6 +19,8 @@ class CreateAdministradorTable extends Migration
             $table->string('Apellido_Paterno_Administrador',50);
             $table->string('Apellido_Materno_Administrador',50);
             $table->string('Telefono_Administrador',12);
+
+            $table->timestamps();
         });
     }
 

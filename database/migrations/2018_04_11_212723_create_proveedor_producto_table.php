@@ -18,6 +18,8 @@ class CreateProveedorProductoTable extends Migration
             $table->foreign('Id_Producto')->references('Id_Producto')->on('Producto');
             $table->string('Id_Proveedor',12);
             $table->foreign('Id_Proveedor')->references('Id_Proveedor')->on('Proveedor');
+
+            $table->timestamps();
         });
     }
 

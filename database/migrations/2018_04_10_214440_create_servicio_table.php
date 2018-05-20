@@ -17,6 +17,8 @@ class CreateServicioTable extends Migration
             $table->string('Id_Servicio',12)->primary('Id_Servicio');
             $table->string('Nombre_Servicio',50);
             $table->smallinteger('Precio');
+
+            $table->timestamps();
         });
     }
 

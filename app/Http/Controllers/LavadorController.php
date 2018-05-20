@@ -20,19 +20,21 @@ class LavadorController extends Controller
     	return view('lavador.create');
     }
 
-    public function store(Request $request){
-        try{
+    public function store (Request $request) {
+        //try{
             $lavador = new Lavador;
             $lavador->Nombre_Lavador = $request->input('Nombre');
             $lavador->Apellido_Paterno_Lavador = $request->input('Apellido_Paterno');
             $lavador->Apellido_Materno_Lavador = $request->input('Apellido_Materno');
-            $lavador->Id_Lavador = strtoupper(substr($request->input('Nombre'),0,3) . substr($request->input('Nombre'),-3));
             $lavador->Telefono_Lavador = $request->input('Telefono');
+            $lavador->Id_Lavador = strtoupper(substr($request->input('Nombre'),0,1) . substr($request->input('Apellido_Paterno'),0,1) . substr($request->input('Apellido_Materno'),0,1) . substr($request->input('Telefono'),0,5));            
             $lavador->save();
-            return redirect('/lavador');
-        } catch (\Illuminate\Database\QueryException $e){
-            return redirect('/lavador');
-        }
+            return 'listo';
+            //return redirect('/lavador');
+        //} catch (\Illuminate\Database\QueryException $e){
+        //return 'no funcona';
+        //return redirect('/lavador');
+        
     }
 
     public function edit($id_lavador) {

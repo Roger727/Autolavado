@@ -20,6 +20,8 @@ class CreateProveedorTable extends Migration
             $table->string('Apellido_Materno_Proveedor',50);
             $table->string('Telefono_Proveedor',12);
             $table->string('RFC',10);
+
+            $table->timestamps();
         });
     }
 

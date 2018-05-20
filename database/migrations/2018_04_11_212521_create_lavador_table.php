@@ -19,6 +19,8 @@ class CreateLavadorTable extends Migration
             $table->string('Apellido_Paterno_Lavador',50);
             $table->string('Apellido_Materno_Lavador',50);
             $table->string('Telefono_Lavador',12);
+            
+            $table->timestamps();
         });
     }
 
