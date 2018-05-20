@@ -46,8 +46,8 @@ class ServicioController extends Controller
 	      $servicio->save();
 	      return redirect('/servicio');
 	    } catch (\Illuminate\Database\QueryException $e){
-          //session()->flash("Error","No es posible Modificar este Servicio");
-          	return redirect('/servicio');
+          session()->flash("Error","No es posible Modificar este Servicio");
+          return redirect('/servicio');
       	}
     }
 

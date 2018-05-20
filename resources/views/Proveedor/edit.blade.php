@@ -13,7 +13,7 @@
           </div>
           <div class="form-group" >
             <label>Nombre:</label>
-            <input value="{{$proveedor->Nombre_Proveedor}}" class="form-control" name="Nombre_Producto">
+            <input value="{{$proveedor->Nombre_Proveedor}}" class="form-control" name="Nombre_Proveedor">
           <div class="form-group" >
             <label>Apellido paterno:</label>
             <input value="{{$proveedor->Apellido_Paterno_Proveedor}}" class="form-control" name="Apellido_Paterno">
@@ -24,7 +24,7 @@
           </div>                      
           <div class="form-group" >
             <label>Telefono:</label>
-            <input value="{{$proveedor->Telefono_Proveedor}}" class="form-control" name="Telefono_Proveedor">
+            <input value="{{$proveedor->Telefono_Proveedor}}" class="form-control" name="Telefono">
           </div>              
           <div class="form-group" >
             <label>RFC:</label>

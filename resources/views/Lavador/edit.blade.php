@@ -17,11 +17,11 @@
           </div>
           <div class="form-group">
             <label for="Lavador">Apellido paterno:</label>
-            <input class="form-control" type="text" name="Nombre" value= "{{$lavador->Apellido_Paterno_Lavador}}">
+            <input class="form-control" type="text" name="Apellido_Paterno" value= "{{$lavador->Apellido_Paterno_Lavador}}">
           </div>
           <div class="form-group">
             <label for="Lavador">Apellido materno:</label>
-            <input class="form-control" type="text" name="Nombre" value= "{{$lavador->Apellido_Materno_Lavador}}">
+            <input class="form-control" type="text" name="Apellido_Materno" value= "{{$lavador->Apellido_Materno_Lavador}}">
           </div>
           <div class="form-group">
             <label for="Lavador">Telefono:</label>

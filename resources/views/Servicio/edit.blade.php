@@ -17,7 +17,7 @@
           </div>
           <div class="form-group">
             <label for="Servicio">Precio del servicio:</label>
-            <input type="number" name="Precio" value= "{{$servicio->Precio}}">
+            <input type="number" name="Precio_Producto" value= "{{$servicio->Precio}}">
           </div>
           <br>
           <div align="right"><button type="submit" class="btn btn-outline-primary">Actualizar</button>

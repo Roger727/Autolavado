@@ -27,7 +27,6 @@ class ProductoController extends Controller
 			$producto->Id_Producto = $request->input('Id_Producto');
 			$producto->Nombre_Producto = $request->input('Nombre_Producto');
 			$producto->Precio = $request->input('Precio_Producto');
-			dd($producto);
 			$producto->save();
 			return redirect('/producto');
 		} catch (\Illuminate\Database\QueryException $e) {
@@ -48,7 +47,7 @@ class ProductoController extends Controller
 	      $producto->save();
 	      return redirect('/producto');
 	    } catch (\Illuminate\Database\QueryException $e) {
-          //session()->flash("Error","No es posible Modificar este Producto");
+          session()->flash("Error","No es posible Modificar este Producto");
           	return redirect('/producto');
       	}
 	}

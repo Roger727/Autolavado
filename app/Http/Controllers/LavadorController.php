@@ -21,20 +21,18 @@ class LavadorController extends Controller
     }
 
     public function store (Request $request) {
-        //try{
+        try{
             $lavador = new Lavador;
             $lavador->Nombre_Lavador = $request->input('Nombre');
             $lavador->Apellido_Paterno_Lavador = $request->input('Apellido_Paterno');
             $lavador->Apellido_Materno_Lavador = $request->input('Apellido_Materno');
             $lavador->Telefono_Lavador = $request->input('Telefono');
-            $lavador->Id_Lavador = strtoupper(substr($request->input('Nombre'),0,1) . substr($request->input('Apellido_Paterno'),0,1) . substr($request->input('Apellido_Materno'),0,1) . substr($request->input('Telefono'),0,5));            
+            $lavador->Id_Lavador = strtoupper(substr($request->input('Nombre'),0,1) . substr($request->input('Apellido_Paterno'),0,1) . substr($request->input('Apellido_Materno'),0,1) . substr($request->input('Telefono'),0,5));
             $lavador->save();
-            return 'listo';
-            //return redirect('/lavador');
-        //} catch (\Illuminate\Database\QueryException $e){
-        //return 'no funcona';
-        //return redirect('/lavador');
-        
+            return redirect('/lavador');
+        } catch (\Illuminate\Database\QueryException $e) {
+            return redirect('/lavador');
+        }
     }
 
     public function edit($id_lavador) {
@@ -52,7 +50,7 @@ class LavadorController extends Controller
 	      $lavador->save();
 	      return redirect('/lavador');
 	    } catch (\Illuminate\Database\QueryException $e){
-          //session()->flash("Error","No es posible Modificar este Lavador");
+          session()->flash("Error","No es posible Modificar este Lavador");
           	return redirect('/lavador');
       	}
     }

@@ -47,7 +47,7 @@ class ProveedorController extends Controller
 		  	$proveedor->Nombre_Proveedor = $request->input('Nombre_Proveedor');
 			$proveedor->Apellido_Paterno_Proveedor = $request->input('Apellido_Paterno');
 			$proveedor->Apellido_Materno_Proveedor = $request->input('Apellido_Materno');
-			$proveedor->Telefono_Proveedor = $request->input('Telefono_Proveedor');
+			$proveedor->Telefono_Proveedor = $request->input('Telefono');
 			$proveedor->RFC = $request->input('RFC');
 	      	$proveedor->save();
 	      return redirect('/proveedor');

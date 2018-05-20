@@ -15,6 +15,7 @@
         <div style="overflow-x:auto;"><table class="table table-sm table-responsive">
   <thead class="thead-default">
     <tr>
+      <th>Id de servicio:</th>
       <th>Nombre servicio:</th>
       <th>Precio:</th>
       <th></th>

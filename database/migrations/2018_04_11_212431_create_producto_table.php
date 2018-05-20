@@ -17,7 +17,6 @@ class CreateProductoTable extends Migration
             $table->string('Id_Producto',12)->primary('Id_Producto');
             $table->string('Nombre_Producto',50);
             $table->smallinteger('Precio');
-            $table->smallinteger('Existencia');
 
             $table->timestamps();
         });
