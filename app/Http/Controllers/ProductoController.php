@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Producto;
+use App\Proveedor;
 
 class ProductoController extends Controller
 {
@@ -18,7 +19,8 @@ class ProductoController extends Controller
 	}
 
 	public function create () {
-		return view('Producto.create');
+		$proveedores = Proveedor::all();
+		return view('Producto.create',['proveedores' => $proveedores]);
 	}
 
 	public function store (Request $request) {
@@ -28,6 +30,10 @@ class ProductoController extends Controller
 			$producto->Nombre_Producto = $request->input('Nombre_Producto');
 			$producto->Precio = $request->input('Precio_Producto');
 			$producto->save();
+
+			$proveedor = Proveedor::find($request->input('Id_Proveedor'));
+			$proveedor->productos()->attach($producto->Id_Producto);	
+			
 			return redirect('/producto');
 		} catch (\Illuminate\Database\QueryException $e) {
             return redirect('/producto');
