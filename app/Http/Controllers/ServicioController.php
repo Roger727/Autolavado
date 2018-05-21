@@ -25,6 +25,7 @@ class ServicioController extends Controller
             $servicio = new Servicio;
             $servicio->Nombre_Servicio = $request->input('Nombre_Servicio');
             $servicio->Id_Servicio = strtoupper(substr($request->input('Nombre_Servicio'),0,3) . substr($request->input('Nombre_Servicio'),-3));
+            $servicio->Descripcion_Servicio = $request->input('Descripcion');
             $servicio->Precio = $request->input('Precio');
             $servicio->save();
             return redirect('/servicio');

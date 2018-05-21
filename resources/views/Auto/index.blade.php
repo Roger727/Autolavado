@@ -35,8 +35,9 @@
                 {{method_field('delete')}}
               <input type="hidden" name="Id_Producto" value="{{$automovil->Id_Automovil}}">
             <button type="submit" class="btn btn-secondary btn-outline-danger ">Eliminar</button>
-          </form> <a href="{{url('/auto/' . $automovil->Id_Automovil . '/edit')}}" class="btn btn-secondary btn-outline-info">Modificar</a>
+          </form> 
           <a href="{{url('/auto/' . $automovil->Id_Automovil . '/edit')}}" class="btn btn-secondary btn-outline-info">Servicio</a>
+          <a  href="{{url('/auto/' . $automovil->Id_Automovil . '/pago')}}" class="btn btn-secondary btn-outline-info">Pago</a>
             </div>
           </td>
         </tr>

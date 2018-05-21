@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Automovil;
+use App\Lavador;
+use App\Servicio;
 
 class AutomovilController extends Controller
 {
@@ -39,7 +41,11 @@ class AutomovilController extends Controller
 
     public function edit($id_Automovil) {
         $auto = Automovil::where('Id_Automovil', $id_Automovil)->first();
-        return view('auto.edit',['auto' => $auto]);
+        $servicios = Servicio::all();
+        $lavadores = Lavador::all();
+        return view('auto.edit',['auto' => $auto, 
+    								'servicios' => $servicios,
+    								'lavadores' => $lavadores]);
     }
 
 	public function update(Request $request, $id_Automovil) {
@@ -48,8 +54,8 @@ class AutomovilController extends Controller
 	       $auto->Matricula = $request->input('Matricula');
             $auto->Color = $request->input('Color');
             $auto->Modelo = $request->input('Modelo');
-            $auto->Id_Lavador = $request->input('Lavador');
-            $auto->Id_Servicio = $request->input('Servicio');
+            $auto->Id_Lavador = $request->input('Id_Lavador');
+            $auto->Id_Servicio = $request->input('Id_Servicio');
 
 	      $auto->save();
 	      return redirect('/auto');
@@ -71,12 +77,12 @@ class AutomovilController extends Controller
         }
     }
 
-    public function pago (Request $id_automovil) {
+    public function pago (Request $request, $id_automovil) {
         try{
           $auto = Automovil::where('Id_Automovil', $id_Automovil)->first();
           $auto->Pago = 'Pagado';
           $auto->save();
-          return redirect()->back();
+          return redirect('/auto');
         } catch (\Illuminate\Database\QueryException $e){
           session()->flash("Error","No es posible Modificar este automovil");
             return redirect('/auto');

@@ -11,4 +11,8 @@ class Automovil extends Model
     public $fillable=['Id_Automovil','Matricula','Color','Modelo', 'Fecha'];
     protected $table='Automovil';
     protected $primaryKey='Id_Automovil';
+
+    public function profile() {
+ 		 return $this->hasOne('App\Lavador');
+	}
 }

@@ -23,24 +23,21 @@
           <br>
          <br>
          <label>Servicio:</label>
-           <select name="Id_Servicio" id="input" class="form-control">
-            <option> -- Seleccione el servicio -- </option>
-            @foreach ($servicios as $servicio)
-                <option value="{{$servicio->Id_Servicio}}">{{$servicio->Nombre_Servicio}}</option>
-            @endforeach
-        </select>
+           <input class="form-control" placeholder="######" name="Id_Servicio" value="{{$auto->Id_Servicio}}" readonly>
           <br>
          <label>Lavador:</label>
-         <select name="Id_Lavador" id="input" class="form-control">
-           <option> -- Seleccione el servicio -- </option>
-            @foreach ($lavadores as $lavador)
-                <option value="{{$lavador->Id_Lavador}}">{{$lavador->Nombre_Lavador . " " . $lavador->Apellido_Paterno_Lavador . " " . $lavador->Apellido_Materno_Lavador}}</option>
-            @endforeach  
-          </select>     
+         <input class="form-control" placeholder="######" name="Id_Lavador" value="{{$auto->Id_Lavador}}" readonly>
+          <br>
+          <label>Servicio:</label>
+           <select name="Id_Servicio" id="input" class="form-control">
+            <option> -- Seleccione el servicio -- </option>
+                <option value="Pagado">Pagado</option>
+                <option value="NULL">No Pagado</option>
+        </select>
           </div>         
           <div align="right">
             <a class="btn btn-outline-secondary" href="{{url('/auto/')}}">Regresar</a>
-            <button type="submit" class="btn btn-outline-primary">Enviar Registro</button>
+            <button type="submit" class="btn btn-outline-primary">Realizar Pago</button>
             
           </div>
         </form>
