@@ -27,6 +27,7 @@
           <td>{{$servicio->Id_Servicio}}</td>
           <td>{{$servicio->Nombre_Servicio}}</td>
           <td>{{$servicio->Precio}}</td>
+          <td>{{$servicio->Descripcion_Servicio}}</td>
           <td>
             <div class="btn-group btn-group-sm" role="group" aria-label="">
               <form method="POST" action="{{url('/servicio/' . $servicio->Id_Servicio)}}">

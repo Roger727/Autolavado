@@ -79,7 +79,7 @@ class AutomovilController extends Controller
 
     public function pago (Request $request, $id_automovil) {
         try{
-          $auto = Automovil::where('Id_Automovil', $id_Automovil)->first();
+          $auto = Automovil::where('Id_Automovil', $id_automovil)->first();
           $auto->Pago = 'Pagado';
           $auto->save();
           return redirect('/auto');

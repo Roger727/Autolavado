@@ -8,7 +8,7 @@ class Automovil extends Model
 {
     
     public $incrementing=false;
-    public $fillable=['Id_Automovil','Matricula','Color','Modelo', 'Fecha'];
+    public $fillable=['Id_Automovil','Matricula','Color','Modelo', 'Fecha','Id_Lavador','Id_Servicio','Pago'];
     protected $table='Automovil';
     protected $primaryKey='Id_Automovil';
 
