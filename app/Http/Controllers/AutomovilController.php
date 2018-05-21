@@ -48,6 +48,9 @@ class AutomovilController extends Controller
 	       $auto->Matricula = $request->input('Matricula');
             $auto->Color = $request->input('Color');
             $auto->Modelo = $request->input('Modelo');
+            $auto->Id_Lavador = $request->input('Lavador');
+            $auto->Id_Servicio = $request->input('Servicio');
+
 	      $auto->save();
 	      return redirect('/auto');
 	    } catch (\Illuminate\Database\QueryException $e){
@@ -66,6 +69,18 @@ class AutomovilController extends Controller
             session()->flash("Error","No es posible eliminar ese automovil");
             return redirect()->back();
         }
+    }
+
+    public function pago (Request $id_automovil) {
+        try{
+          $auto = Automovil::where('Id_Automovil', $id_Automovil)->first();
+          $auto->Pago = 'Pagado';
+          $auto->save();
+          return redirect()->back();
+        } catch (\Illuminate\Database\QueryException $e){
+          session()->flash("Error","No es posible Modificar este automovil");
+            return redirect('/auto');
+        }        
     }
 
 }

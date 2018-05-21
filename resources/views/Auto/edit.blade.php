@@ -35,6 +35,19 @@
             <option value="Dorado"> Dorado </option>
           </select>
          <br>
+         <label>Servicio:</label>
+          <select class="form-control" name="Servicio" selected="{{$auto->Color}}">
+            <option>-- Seleccione --</option>
+            <option value="Azul"> premium </option>
+            <option value="Azul"> básico </option>
+          </select>
+          <br>
+         <label>Lavador:</label>
+          <select class="form-control" name="Lavador" selected="{{$auto->Color}}">
+            <option>-- Seleccione --</option>
+            <option value="Azul"> pedrito </option>
+            <option value="Azul"> aisaac </option>
+          </select>          
           </div>          
           <div align="right">
             <a class="btn btn-outline-secondary" href="{{url('/auto/')}}">Regresar</a>

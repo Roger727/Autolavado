@@ -49,3 +49,4 @@ Route::get('/auto/{id_proveedor}/edit', 'AutomovilController@edit');
 Route::post('/auto', 'AutomovilController@store');
 Route::delete('/auto/{id_proveedor}', 'AutomovilController@delete');
 Route::patch('/auto/{id_proveedor}', 'AutomovilController@update');
+Route::patch('/auto/{id_proveedor}', 'AutomovilController@pago');
