@@ -13,6 +13,10 @@
             <label for="Servicio">Precio del servicio:</label>
             <input class="form-control" type="number" name="Precio">
           </div>
+          <div class="form-group">
+            <label for="Descripcion">Descripción del servicio:</label>
+            <input class="form-control" type="text" name="Descripcion">
+          </div>
           <br>
           <div align="right">
             <button type="submit" class="btn btn-outline-primary">Registrar</button>

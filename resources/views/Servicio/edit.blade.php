@@ -19,6 +19,10 @@
             <label for="Servicio">Precio del servicio:</label>
             <input type="number" name="Precio_Producto" value= "{{$servicio->Precio}}">
           </div>
+          <div class="form-group">
+            <label for="Descripcion">Descripción del servicio:</label>
+            <input class="form-control" type="text" name="Descripcion" value="{{$servicio->Descripcion_Servicio}}">
+          </div>          
           <br>
           <div align="right"><button type="submit" class="btn btn-outline-primary">Actualizar</button>
         </form>
