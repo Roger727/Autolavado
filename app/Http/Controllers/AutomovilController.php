@@ -89,4 +89,17 @@ class AutomovilController extends Controller
         }        
     }
 
+    public function obtener_datos (Request $request) {
+        $opcion = Servicio::find($request->datos);
+        $descripcion = $opcion->Descricion_Servicio;
+        $precio = $opcion->Precio;
+
+        $respuesta = [
+            'precio' => $precio,
+            'descripcion' => $descripcion
+        ];
+
+        return response()->json($respuesta);
+    }
+
 }
