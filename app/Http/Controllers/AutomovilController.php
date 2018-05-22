@@ -30,6 +30,8 @@ class AutomovilController extends Controller
             $auto->Matricula = $request->input('Matricula');
             $auto->Color = $request->input('Color');
             $auto->Modelo = $request->input('Modelo');
+            $auto->Id_Lavador = "NULL";
+            $auto->Id_Servicio = "NULL";
             $auto->Id_Automovil = $request->input('Matricula') . $request->input('Fecha');
 
             $auto->save();

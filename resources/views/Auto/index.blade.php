@@ -38,8 +38,16 @@
           <td>{{$automovil->Color}}</td>
           <td>{{$automovil->Matricula}}</td>
           <td>{{$automovil->Pago}}</td>
+          @if(is_null($automovil->Id_Servicio) != 1)
           <td>{{$automovil->servicios->Nombre_Servicio}}</td>
+          @else
+          <td> </td>
+          @endif
+          @if(is_null($automovil->Id_Lavador) != 1)
           <td>{{$automovil->lavadores->Nombre_Lavador}}</td>
+          @else
+          <td> </td>
+          @endif
           <td>
             
           
