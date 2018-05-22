@@ -12,7 +12,14 @@ class Automovil extends Model
     protected $table='Automovil';
     protected $primaryKey='Id_Automovil';
 
-    public function profile() {
- 		 return $this->hasOne('App\Lavador');
-	}
+    public function lavadores ()
+    {
+    	return $this->belongsTo(Lavador::class,'Id_Lavador','Id_Lavador');
+    }
+
+
+      public function servicios ()
+    {
+    	return $this->belongsTo(Servicio::class,'Id_Servicio','Id_Servicio');
+    }
 }

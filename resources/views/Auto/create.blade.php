@@ -7,7 +7,7 @@
             <h2>Registro De Automovil</h2>
           <div class="form-group">
             <label for="">Fecha:</label>
-            <input value="{{$fecha_actual = date('Y-m-d')}}" type="date" class="form-control" name="Fecha" disabled="true">
+            <input value="{{$fecha_actual = date('Y-m-d')}}" type="text" class="form-control" name="Fecha" readonly>
           </div>        
           <div class="form-group">
             <br>

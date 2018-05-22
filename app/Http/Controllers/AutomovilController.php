@@ -25,7 +25,7 @@ class AutomovilController extends Controller
 
 
     public function store (Request $request) {
-        try{
+       
             $auto = new Automovil;
             $auto->Matricula = $request->input('Matricula');
             $auto->Color = $request->input('Color');
@@ -34,9 +34,7 @@ class AutomovilController extends Controller
 
             $auto->save();
             return redirect('/auto');
-        } catch (\Illuminate\Database\QueryException $e) {
-            return redirect('/auto');
-        }
+       
     }
 
     public function edit($id_Automovil) {

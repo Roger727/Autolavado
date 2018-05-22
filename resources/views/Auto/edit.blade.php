@@ -32,7 +32,7 @@
           <br>
          <label>Lavador:</label>
          <select name="Id_Lavador" id="input" class="form-control">
-           <option> -- Seleccione el servicio -- </option>
+           <option> -- Seleccione el lavador -- </option>
             @foreach ($lavadores as $lavador)
                 <option value="{{$lavador->Id_Lavador}}">{{$lavador->Nombre_Lavador . " " . $lavador->Apellido_Paterno_Lavador . " " . $lavador->Apellido_Materno_Lavador}}</option>
             @endforeach  
